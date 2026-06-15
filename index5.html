@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Gallery Project</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    display:block;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h2{
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#cbd5e1;
+}
+
+/* ===================== */
+/* Media Query #1 */
+/* Mengubah div dan gambar */
+/* ===================== */
+
+@media screen and (min-width:772px){
+
+    .container{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .card{
+        width:45%;
+    }
+
+    .card img{
+        height:300px;
+    }
+}
+
+/* ===================== */
+/* Media Query #2 */
+/* Mengubah div */
+/* ===================== */
+
+@media screen and (min-width:998px){
+
+    .container{
+        max-width:1400px;
+        margin:auto;
+    }
+
+    .card{
+        width:30%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<h1>Nature Gallery</h1>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200"
+             alt="Mountain landscape">
+        <div class="card-content">
+            <h2>Mountains</h2>
+            <p>Beautiful mountain scenery surrounded by nature.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200"
+             alt="Ocean waves">
+        <div class="card-content">
+            <h2>Ocean</h2>
+            <p>Relaxing ocean waves during sunset.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200"
+             alt="Green forest">
+        <div class="card-content">
+            <h2>Forest</h2>
+            <p>Fresh green forests with peaceful walking paths.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=1200"
+             alt="Lake surrounded by mountains">
+        <div class="card-content">
+            <h2>Lake</h2>
+            <p>Crystal-clear water reflecting surrounding landscapes.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
