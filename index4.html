@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Explorer - Responsive Design Project</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#e2e8f0;
+}
+
+.hero{
+    padding:20px;
+}
+
+.hero img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2{
+    padding:15px 15px 5px;
+}
+
+.card p{
+    padding:0 15px 20px;
+    color:#cbd5e1;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    margin-top:20px;
+}
+
+/* Media Query 1 */
+@media screen and (min-width:600px){
+
+    body{
+        font-size:18px;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Media Query 2 */
+@media screen and (min-width:768px){
+
+    header h1{
+        font-size:3.5rem;
+    }
+
+    .hero img{
+        height:450px;
+        object-fit:cover;
+    }
+}
+
+/* Media Query 3 */
+@media screen and (min-width:992px){
+
+    .gallery{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .hero{
+        max-width:1200px;
+        margin:auto;
+    }
+}
+
+/* Media Query 4 */
+@media screen and (min-width:1200px){
+
+    .gallery{
+        max-width:1400px;
+        margin:auto;
+    }
+
+    .card:hover{
+        transform:scale(1.03);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nature Explorer</h1>
+    <p>Discover beautiful landscapes from around the world</p>
+</header>
+
+<section class="hero">
+    <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200"
+        alt="Beautiful mountain landscape">
+</section>
+
+<section class="gallery">
+
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200"
+            alt="Ocean waves during sunset">
+        <h2>Ocean</h2>
+        <p>Experience the calming beauty of ocean waves and coastal scenery.</p>
+    </div>
+
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200"
+            alt="Green forest pathway">
+        <h2>Forest</h2>
+        <p>Walk through lush green forests and reconnect with nature.</p>
+    </div>
+
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?w=1200"
+            alt="Crystal clear lake">
+        <h2>Lake</h2>
+        <p>Enjoy peaceful lakes surrounded by stunning landscapes.</p>
+    </div>
+
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200"
+            alt="Waterfall flowing over rocks">
+        <h2>Waterfall</h2>
+        <p>Witness the incredible power and beauty of cascading waterfalls.</p>
+    </div>
+
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200"
+            alt="Sunset over the mountains">
+        <h2>Sunset</h2>
+        <p>Admire colorful sunsets that paint the sky with vibrant tones.</p>
+    </div>
+
+    <div class="card">
+        <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200"
+            alt="Snow covered mountain peaks">
+        <h2>Mountains</h2>
+        <p>Explore majestic mountain ranges covered in snow and clouds.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>Responsive Design Final Project | Coursera</p>
+</footer>
+
+</body>
+</html>
